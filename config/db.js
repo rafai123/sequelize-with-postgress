@@ -1,4 +1,5 @@
 const {Sequelize} = require("sequelize")
+const pg = require("pg")
 
 // const sequelize = new Sequelize({
 //     host: `localhost`,
@@ -15,6 +16,7 @@ const sequelize = new Sequelize("verceldb", "default", "CvbDxPm5lIr4", {
     host: "ep-throbbing-flower-96445632-pooler.ap-southeast-1.postgres.vercel-storage.com",
     port: 5432,
     dialect: "postgres",
+    dialectModule: pg,
     logging: false,
     ssl: true,
     dialectOptions: {
